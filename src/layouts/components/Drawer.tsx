@@ -59,6 +59,9 @@ const StyledDrawer = styled(MuiDrawer, {
     ...closedMixin(theme),
     "& .MuiDrawer-paper": closedMixin(theme),
   }),
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
+  },
 }));
 
 export const Drawer = () => {
