@@ -32,6 +32,7 @@ const typography: TypographyOptions = {
     fontFamily: PRIMARY_FONT,
     fontWeight: 700,
     fontSize: 15,
+    color: "#F3EFF5",
   },
 };
 

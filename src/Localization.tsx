@@ -14,7 +14,6 @@ const cacheRtl = createCache({
 
 const cacheLtr = createCache({
   key: "muiltr",
-  stylisPlugins: [prefixer, rtlPlugin],
 });
 
 export const LocalizationProvider = ({ children }: React.PropsWithChildren) => {

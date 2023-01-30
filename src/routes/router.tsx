@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Login } from "../pages/login";
 import { Signup } from "../pages/signup";
+import { MainLayout } from "@/layouts";
 
 export const router = createBrowserRouter([
   {
@@ -17,14 +18,15 @@ export const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <></>,
+    element: <MainLayout />,
+    loader: MainLayout.loader,
     children: [
       {
         element: <></>,
         index: true,
       },
       {
-        path: "/equipment-card",
+        path: "/piece-card",
         element: <></>,
       },
       {

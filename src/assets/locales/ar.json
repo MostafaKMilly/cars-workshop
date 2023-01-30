@@ -11,6 +11,13 @@
     "fullName_validation": "يجب أن يحتوي الاسم الكامل على الأقل 5 حروف",
     "fullName_required": "الاسم الكامل مطلوب",
     "fullName": "الاسم الكامل",
+    "brand_card": "بطاقة ماركة",
+    "model_card": "بطاقة موديل",
+    "piece_card": "بطاقة قطعة",
+    "technical_card": "بطاقة فني",
+    "section_card": "بطاقة قسم",
+    "service_card": "بطاقة خدمة",
+    "sign_out": "تسحيل خروج",
     "direction": "rtl"
   }
 }

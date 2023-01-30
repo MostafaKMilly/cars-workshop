@@ -10,7 +10,14 @@
     "fullName_required": "FullName is required",
     "username_required": "Username is required",
     "password_required": "Password is required",
-    "fullName" : "FullName",
+    "fullName": "FullName",
+    "brand_card": "Brand card",
+    "model_card": "Model card",
+    "piece_card": "Piece card",
+    "technical_card": "Technical card",
+    "section_card": "Section card",
+    "service_card": "Service card",
+    "sign_out" : "Sign out",
     "direction": "ltr"
   }
 }

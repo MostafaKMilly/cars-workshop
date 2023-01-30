@@ -24,7 +24,7 @@ const error: SimplePaletteColorOptions = {
 
 const common: CommonColors = {
   black: "#0D0A0B",
-  white: "#FFFFFF",
+  white: "#F3EFF5",
 };
 
 export const palette: PaletteOptions = {
