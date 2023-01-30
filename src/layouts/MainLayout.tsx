@@ -30,6 +30,7 @@ export const MainLayout = () => {
         alignItems="center"
         px={3}
         width="100%"
+        overflowX="hidden"
         mt={{
           xs: "30px",
           sm: "0px",
