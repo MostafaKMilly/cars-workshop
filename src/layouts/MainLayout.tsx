@@ -22,6 +22,7 @@ export const MainLayout = () => {
         justifyContent="center"
         alignItems="center"
         px={3}
+        width="100%"
       >
         <Outlet />
       </Box>
