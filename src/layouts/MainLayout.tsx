@@ -1,7 +1,9 @@
-import { Box } from "@mui/material";
+import { Box, Toolbar } from "@mui/material";
 import { Outlet, redirect } from "react-router-dom";
 import { Drawer } from "./components";
 import CarRepair from "@/assets/images/car.svg";
+import { useState } from "react";
+import { AppBar } from "./components/AppBar";
 
 const loader = () => {
   // Simulate protection of access to this component if the user is not authenticated
@@ -13,9 +15,14 @@ const loader = () => {
 };
 
 export const MainLayout = () => {
+  const [drawer, setDrawer] = useState(false);
+
+  const handleToggleDrawer = () => setDrawer(!drawer);
+
   return (
     <Box display="flex" height="100lvh" py={5}>
-      <Drawer />
+      <AppBar handleToggleDrawer={handleToggleDrawer} />
+      <Drawer open={drawer} handleToggleDrawer={handleToggleDrawer} />
       <Box
         flexGrow={1}
         display="flex"
@@ -23,6 +30,10 @@ export const MainLayout = () => {
         alignItems="center"
         px={3}
         width="100%"
+        mt={{
+          xs: "30px",
+          sm: "0px",
+        }}
       >
         <Outlet />
       </Box>

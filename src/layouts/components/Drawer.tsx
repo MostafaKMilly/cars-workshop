@@ -6,9 +6,9 @@ import {
   Box,
   IconButton,
   Button,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
-import MenuIcon from "@/assets/icons/menuIcon.svg";
-import { useState } from "react";
 import { DrawerList } from "./DrawerList";
 import { useDrawerNavs } from "../hooks/useDrawerNavs";
 import { DrawerListItem } from "./DrawerListItem";
@@ -16,6 +16,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { useSignout } from "@/shared/hooks/useSignout";
+import MenuIcon from "@/assets/icons/menuIcon.svg";
+import CloseIcon from "@/assets/icons/close.svg";
 
 const drawerWidth = 360;
 
@@ -27,6 +29,10 @@ const openedMixin = (theme: Theme): CSSObject => ({
     duration: theme.transitions.duration.enteringScreen,
   }),
   overflowX: "hidden",
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    position: "fixed",
+  },
 });
 
 const closedMixin = (theme: Theme): CSSObject => ({
@@ -42,9 +48,7 @@ const closedMixin = (theme: Theme): CSSObject => ({
   },
 });
 
-const StyledDrawer = styled(MuiDrawer, {
-  shouldForwardProp: (prop) => prop !== "open",
-})(({ theme, open }) => ({
+const StyledDrawer = styled(MuiDrawer)(({ theme, open }) => ({
   width: drawerWidth,
   flexShrink: 0,
   whiteSpace: "nowrap",
@@ -59,27 +63,27 @@ const StyledDrawer = styled(MuiDrawer, {
     ...closedMixin(theme),
     "& .MuiDrawer-paper": closedMixin(theme),
   }),
-  [theme.breakpoints.down("sm")]: {
-    display: "none",
-  },
 }));
 
-export const Drawer = () => {
-  const [open, setOpen] = useState(false);
+export const Drawer = ({
+  handleToggleDrawer,
+  open,
+}: {
+  open: boolean;
+  handleToggleDrawer: () => void;
+}) => {
   const navs = useDrawerNavs();
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { t } = useTranslation();
   const signout = useSignout();
-
-  const handleToggle = () => {
-    setOpen(!open);
-  };
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <StyledDrawer
       open={open}
-      variant="permanent"
+      variant={matches ? "permanent" : "temporary"}
       anchor="left"
       PaperProps={{
         sx: {
@@ -89,8 +93,15 @@ export const Drawer = () => {
     >
       <Box display="flex" justifyContent={open ? "space-between" : "end"} p={2}>
         {open && <LanguageSelect />}
-        <IconButton onClick={handleToggle}>
-          <img src={MenuIcon} alt="MenuIcon" />
+        <IconButton onClick={handleToggleDrawer}>
+          {matches && <img src={MenuIcon} alt="MenuIcon" />}
+          {!matches && (
+            <img
+              src={CloseIcon}
+              alt="MenuIcon"
+              style={{ background: "#fff", borderRadius: 7 }}
+            />
+          )}
         </IconButton>
       </Box>
       <Box
