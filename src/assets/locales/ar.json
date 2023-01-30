@@ -20,6 +20,21 @@
     "sign_out": "تسحيل خروج",
     "select_card": "يرجى تحديد بطاقة من القائمة",
     "card_under_bulding": "هذه البطاقة قيد البناء، ترقبوا",
+    "card_code": "رمز البطاقة",
+    "description": "الوصف",
+    "latin_name": "الاسم اللاتيني",
+    "brand": "الماركة",
+    "model": "الموديل",
+    "serial_number": "الرقم التسلسلي",
+    "piece_id": "معرف القطعة",
+    "status": "الحالة",
+    "owner": "المالك",
+    "color": "اللون",
+    "manufacture_year": "سنة التصنيع",
+    "carpets": "الفرش",
+    "fuel": "الوقود",
+    "work": "تعمل",
+    "not_work": "لا تعمل",
     "direction": "rtl"
   }
 }

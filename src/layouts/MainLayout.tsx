@@ -21,6 +21,7 @@ export const MainLayout = () => {
         display="flex"
         justifyContent="center"
         alignItems="center"
+        px={3}
       >
         <Outlet />
       </Box>

@@ -20,6 +20,21 @@
     "sign_out": "Sign out",
     "select_card": "Please select a card from the list",
     "card_under_bulding": "This card is under bulding stay tuned",
+    "card_code": "Card code",
+    "description": "Description",
+    "latin_name": "Latin name",
+    "brand": "Brand",
+    "model": "Model",
+    "serial_number": "Serial number",
+    "piece_id": "Piece ID",
+    "status": "Status",
+    "owner": "Owner",
+    "color": "Color",
+    "manufacture_year": "Manufacture year",
+    "carpets": "Carpets",
+    "fuel": "Fuel",
+    "work": "Work",
+    "not_work": "Dosen't work",
     "direction": "ltr"
   }
 }

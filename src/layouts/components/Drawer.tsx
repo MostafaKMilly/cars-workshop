@@ -17,7 +17,7 @@ import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { useSignout } from "@/shared/hooks/useSignout";
 
-const drawerWidth = 330;
+const drawerWidth = 360;
 
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,

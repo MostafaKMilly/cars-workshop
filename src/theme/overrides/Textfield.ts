@@ -37,5 +37,21 @@ export const MuiTextFieldOverrides: Components<
         },
       }),
     },
+    {
+      props: {
+        select: true,
+      },
+      style: ({ theme }) => ({
+        "& .MuiInputBase-root .MuiSvgIcon-root ": {
+          background: theme.palette.common.black,
+          width: "34px",
+          height: "35px",
+          margin: "-6px",
+          color: theme.palette.primary.light,
+          borderRadius: "10px",
+          border: `2px solid ${theme.palette.primary.light}`,
+        },
+      }),
+    },
   ],
 };
