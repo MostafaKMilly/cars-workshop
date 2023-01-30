@@ -1,31 +1,40 @@
 import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 import { CardContainer, CardForm } from "./components";
 import { useTranslation } from "react-i18next";
-import { useCardForm } from "./hooks";
+import { useCardForm, useDialog } from "./hooks";
 import PixcelMikeImg from "@/assets/images/pexelsMike.png";
 import { useNavigate } from "react-router-dom";
+import { GenericDialog } from "@/shared/components";
+import { AddBrandDialog } from "./components/AddBrandDialog";
 
 export const PieceCard = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { openDialog, handleClose, isDialogOpen } = useDialog();
   const form = useCardForm();
 
   const handleResetForm = () => {
     form.resetForm();
   };
 
-  const handleClose = () => {
+  const handleCloseCard = () => {
     navigate("/");
   };
 
   return (
     <CardContainer elevation={1}>
       <Typography variant="h1">{t("piece_card")}</Typography>
-      <Grid container justifyContent="space-between" mt={5} overflow="auto">
-        <Grid item xs={12} sm={5}>
-          <CardForm {...form} />
+      <Grid
+        container
+        justifyContent="space-between"
+        mt={5}
+        overflow="auto"
+        rowSpacing={2}
+      >
+        <Grid item xs={12} lg={5}>
+          <CardForm {...form} openDialog={openDialog} />
         </Grid>
-        <Grid item xs={12} sm={5}>
+        <Grid item xs={12} lg={5}>
           <Typography
             variant="body1"
             sx={{ color: "primary.light", mb: "20px" }}
@@ -35,6 +44,7 @@ export const PieceCard = () => {
           <Box
             component="img"
             src={PixcelMikeImg}
+            width="90%"
             sx={{
               border: ({ palette }) => `2px solid ${palette.primary.light}`,
               borderRadius: "10px",
@@ -48,7 +58,10 @@ export const PieceCard = () => {
         columnGap={2}
         rowGap={2}
         mt={2}
-        justifyContent="end"
+        justifyContent={{
+          xs: "center",
+          sm: "end",
+        }}
         flexWrap="wrap"
       >
         <Button color="secondary" onClick={handleResetForm}>
@@ -60,8 +73,15 @@ export const PieceCard = () => {
         <Button color="error" onClick={handleResetForm}>
           {t("delete")}
         </Button>
-        <Button onClick={handleClose}>{t("close")}</Button>
+        <Button onClick={handleCloseCard}>{t("close")}</Button>
       </Box>
+      <AddBrandDialog
+        open={isDialogOpen("brand")}
+        onClose={handleClose}
+        handleAddBrand={(brand) => {
+          form.setFieldValue("brand", brand);
+        }}
+      />
     </CardContainer>
   );
 };

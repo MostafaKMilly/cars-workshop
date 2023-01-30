@@ -40,6 +40,10 @@
     "delete": "Delete",
     "close": "Close",
     "piece_photo": "Piece Photo",
+    "accept": "Accept",
+    "cancel": "Cancel",
+    "choose_owner" : "Please choose owner",
+    "choose_brand" : "Please choose brand",
     "direction": "ltr"
   }
 }

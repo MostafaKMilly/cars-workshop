@@ -40,6 +40,10 @@
     "delete": "حذف",
     "close": "إغلاق",
     "piece_photo": "صورة القطعة",
+    "accept": "موافق",
+    "cancel": "الغاء الامر",
+    "choose_owner": "يرجى اختيار المالك",
+    "choose_brand": "يرجى اختيار الماركة",
     "direction": "rtl"
   }
 }

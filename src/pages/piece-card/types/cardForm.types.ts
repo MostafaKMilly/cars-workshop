@@ -13,3 +13,7 @@ export type PieceCardForm = {
   carpets: string;
   fuel: string;
 };
+
+export type Dialog = "brand" | "owner" | undefined;
+
+export type Brands = { id: number; name: string }[];

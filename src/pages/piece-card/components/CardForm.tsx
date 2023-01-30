@@ -8,9 +8,10 @@ import {
 import { useCardForm } from "../hooks";
 import { useTranslation } from "react-i18next";
 import ThreedotsHorizontal from "@/assets/icons/threedotsHorizontal.svg";
+import { Dialog } from "../types";
 
-export const CardForm = (props: ReturnType<typeof useCardForm>) => {
-  const { getFieldProps, handleSubmit } = props;
+export const CardForm = (props: CardFormProps) => {
+  const { getFieldProps, handleSubmit, openDialog } = props;
   const { t } = useTranslation();
 
   return (
@@ -77,8 +78,11 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
               sx: {
                 paddingRight: 0,
               },
-              endAdornment: <img src={ThreedotsHorizontal} />,
+              endAdornment: (
+                <img src={ThreedotsHorizontal} style={{ cursor: "pointer" }} />
+              ),
             }}
+            onClick={() => openDialog("brand")}
           />
         </FormControl>
 
@@ -159,8 +163,11 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
               sx: {
                 paddingRight: 0,
               },
-              endAdornment: <img src={ThreedotsHorizontal} />,
+              endAdornment: (
+                <img src={ThreedotsHorizontal} style={{ cursor: "pointer" }} />
+              ),
             }}
+            onClick={() => openDialog("owner")}
           />
         </FormControl>
 
@@ -220,4 +227,8 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
       </Stack>
     </form>
   );
+};
+
+type CardFormProps = ReturnType<typeof useCardForm> & {
+  openDialog: (dialog: Dialog) => void;
 };
