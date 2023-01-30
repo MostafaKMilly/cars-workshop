@@ -35,6 +35,11 @@
     "fuel": "Fuel",
     "work": "Work",
     "not_work": "Dosen't work",
+    "new": "New",
+    "save": "Save",
+    "delete": "Delete",
+    "close": "Close",
+    "piece_photo": "Piece Photo",
     "direction": "ltr"
   }
 }

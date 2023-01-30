@@ -24,7 +24,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             flexDirection: "row",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("card_code")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("card_code")}</FormLabel>
           <TextField
             fullWidth
             {...getFieldProps("code")}
@@ -42,7 +42,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("description")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("description")}</FormLabel>
           <TextField fullWidth {...getFieldProps("description")} />
         </FormControl>
 
@@ -55,7 +55,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("latin_name")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("latin_name")}</FormLabel>
           <TextField fullWidth {...getFieldProps("latinName")} />
         </FormControl>
 
@@ -68,7 +68,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("brand")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("brand")}</FormLabel>
           <TextField
             fullWidth
             {...getFieldProps("brand")}
@@ -91,7 +91,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("model")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("model")}</FormLabel>
           <TextField fullWidth {...getFieldProps("model")} />
         </FormControl>
 
@@ -104,7 +104,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("serial_number")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("serial_number")}</FormLabel>
           <TextField
             fullWidth
             {...getFieldProps("serialNumber")}
@@ -121,7 +121,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("piece_id")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("piece_id")}</FormLabel>
           <TextField fullWidth {...getFieldProps("pieceId")} type="number" />
         </FormControl>
 
@@ -134,7 +134,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("status")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("status")}</FormLabel>
           <TextField fullWidth {...getFieldProps("status")} select>
             <MenuItem value="work">{t("work")}</MenuItem>
             <MenuItem value="not_work">{t("not_work")}</MenuItem>
@@ -150,7 +150,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("owner")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("owner")}</FormLabel>
           <TextField
             fullWidth
             {...getFieldProps("owner")}
@@ -173,7 +173,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("color")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("color")}</FormLabel>
           <TextField fullWidth {...getFieldProps("color")} />
         </FormControl>
 
@@ -186,7 +186,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>
+          <FormLabel sx={{ minWidth: "105px" }}>
             {t("manufacture_year")}
           </FormLabel>
           <TextField fullWidth {...getFieldProps("date")} type="date" />
@@ -201,7 +201,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("carpets")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("carpets")}</FormLabel>
           <TextField fullWidth {...getFieldProps("carpets")} />
         </FormControl>
 
@@ -214,7 +214,7 @@ export const CardForm = (props: ReturnType<typeof useCardForm>) => {
             justifyContent: "space-between",
           }}
         >
-          <FormLabel sx={{ minWidth: "90px" }}>{t("fuel")}</FormLabel>
+          <FormLabel sx={{ minWidth: "105px" }}>{t("fuel")}</FormLabel>
           <TextField fullWidth {...getFieldProps("fuel")} />
         </FormControl>
       </Stack>

@@ -35,6 +35,11 @@
     "fuel": "الوقود",
     "work": "تعمل",
     "not_work": "لا تعمل",
+    "new": "جديد",
+    "save": "حفظ",
+    "delete": "حذف",
+    "close": "إغلاق",
+    "piece_photo": "صورة القطعة",
     "direction": "rtl"
   }
 }
