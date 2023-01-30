@@ -32,4 +32,8 @@ export const palette: PaletteOptions = {
   secondary,
   error,
   common,
+  mode: "dark",
+  background: {
+    paper: common.black,
+  },
 };

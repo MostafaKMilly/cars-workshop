@@ -7,7 +7,6 @@ export const LanguageSelect = () => {
     <Select
       variant="outlined"
       value={i18n.language}
-      sx={{ backgroundColor: "common.white" }}
       onChange={(e) => {
         i18n.changeLanguage(e.target.value as string);
       }}

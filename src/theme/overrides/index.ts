@@ -4,6 +4,7 @@ import { CssBaselineOverrides } from "./CssBaseLine";
 import { MuiFormLableOverrides } from "./FormLabel";
 import { MuiTextFieldOverrides } from "./Textfield";
 import { MuiIconButtonOverrides } from "./IconButton";
+import { MuiPaperOverrides } from "./Paper";
 
 export const componentOverrides: Components<Theme> = {
   MuiTextField: MuiTextFieldOverrides,
@@ -11,4 +12,5 @@ export const componentOverrides: Components<Theme> = {
   MuiCssBaseline: CssBaselineOverrides,
   MuiFormLabel: MuiFormLableOverrides,
   MuiIconButton: MuiIconButtonOverrides,
+  MuiPaper: MuiPaperOverrides,
 };

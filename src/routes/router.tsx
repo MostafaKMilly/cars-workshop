@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import { Login } from "../pages/login";
 import { Signup } from "../pages/signup";
 import { MainLayout } from "@/layouts";
+import { NoCardsOverlay, NotFoundCard } from "@/layouts/components";
+import { PieceCard } from "@/pages/piece-card";
 
 export const router = createBrowserRouter([
   {
@@ -22,16 +24,16 @@ export const router = createBrowserRouter([
     loader: MainLayout.loader,
     children: [
       {
-        element: <></>,
+        element: <NoCardsOverlay />,
         index: true,
       },
       {
         path: "/piece-card",
-        element: <></>,
+        element: <PieceCard />,
       },
       {
         path: "*",
-        element: <></>,
+        element: <NotFoundCard />,
       },
     ],
   },

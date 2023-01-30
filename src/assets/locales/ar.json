@@ -18,6 +18,8 @@
     "section_card": "بطاقة قسم",
     "service_card": "بطاقة خدمة",
     "sign_out": "تسحيل خروج",
+    "select_card": "يرجى تحديد بطاقة من القائمة",
+    "card_under_bulding": "هذه البطاقة قيد البناء، ترقبوا",
     "direction": "rtl"
   }
 }
