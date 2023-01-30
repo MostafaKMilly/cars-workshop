@@ -1,2 +1,41 @@
-import { Components } from "@mui/material";
-export const MuiTextFieldOverrides: Components["MuiTextField"] = {};
+import { Components, Theme } from "@mui/material";
+export const MuiTextFieldOverrides: Components<
+  Omit<Theme, "components">
+>["MuiTextField"] = {
+  defaultProps: {
+    variant: "filled",
+    hiddenLabel: true,
+    InputProps: {
+      disableUnderline: true,
+    },
+  },
+  styleOverrides: {
+    root: ({ theme }) => ({
+      backgroundColor: theme.palette.primary.main,
+      border: `2px solid ${theme.palette.primary.light}`,
+      borderRadius: 10,
+    }),
+  },
+  variants: [
+    {
+      props: {
+        variant: "filled",
+      },
+      style: ({ theme }) => ({
+        "& .MuiFormLabel-root": {
+          display: "none",
+        },
+        "& .MuiInputBase-root": {
+          backgroundColor: theme.palette.primary.main,
+          height: 36,
+          color: "#F3EFF5",
+          borderRadius: 10,
+          overflow: "hidden",
+        },
+        "& .MuiFilledInput-root::after .MuiFilledInput-root::before": {
+          display: "none",
+        },
+      }),
+    },
+  ],
+};
