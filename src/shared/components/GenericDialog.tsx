@@ -61,17 +61,12 @@ export const GenericDialog = ({
         sx={{
           justifyContent: "flex-start",
           columnGap: 1,
+          rowGap: 1,
+          flexWrap: "wrap",
         }}
       >
         {!!submitButton && (
-          <Button
-            variant="contained"
-            sx={{
-              px: 4,
-            }}
-            {...submitButtonProps}
-            onClick={onSubmit}
-          >
+          <Button variant="contained" {...submitButtonProps} onClick={onSubmit}>
             {submitButtonLabel}
           </Button>
         )}
@@ -79,11 +74,9 @@ export const GenericDialog = ({
           <Button
             variant="contained"
             color="secondary"
-            sx={{
-              px: 4,
-            }}
             {...closeButtonProps}
             onClick={onClose}
+            sx={{ m: "0px !important" }}
           >
             {closeButtonLabel}
           </Button>
