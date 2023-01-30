@@ -38,6 +38,7 @@ export const LoginForm = () => {
               id="password"
               required
               type="password"
+              autoComplete="on"
               {...getFieldProps("password")}
             />
             <FormHelperText>
