@@ -17,6 +17,7 @@ export const MuiButtonOverrides: Components<
       paddingLeft: ownerState.startIcon ? 10 : 16,
       textTransform: "initial",
       height: 36,
+      minWidth: 145,
     }),
     contained: ({ ownerState, theme }) => {
       const color = ownerState.color ?? "inherit";
