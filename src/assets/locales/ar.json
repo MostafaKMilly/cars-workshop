@@ -4,10 +4,13 @@
     "password": "كلمة المرور",
     "login": "تسجيل الدخول",
     "register": "تسجيل",
-    "login_username_validation": "يجب أن يحتوي اسم المستخدم على على الأقل 5 حروف",
-    "login_password_validation": "يجب أن تحتوي كلمة المرور على الأقل 7 حروف",
-    "login_username_required": "اسم المستخدم مطلوب",
-    "login_password_required": "كلمة المرور مطلوبة",
+    "username_validation": "يجب أن يحتوي اسم المستخدم على على الأقل 5 حروف",
+    "password_validation": "يجب أن تحتوي كلمة المرور على الأقل 7 حروف",
+    "username_required": "اسم المستخدم مطلوب",
+    "password_required": "كلمة المرور مطلوبة",
+    "fullName_validation": "يجب أن يحتوي الاسم الكامل على الأقل 5 حروف",
+    "fullName_required": "الاسم الكامل مطلوب",
+    "fullName": "الاسم الكامل",
     "direction": "rtl"
   }
 }

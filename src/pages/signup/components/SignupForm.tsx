@@ -8,12 +8,12 @@ import {
   FormHelperText,
 } from "@mui/material";
 import { Form, useNavigate } from "react-router-dom";
-import { useLoginForm } from "../hooks";
+import { useSignupForm } from "../hooks";
 import _ from "lodash";
 import { useTranslation } from "react-i18next";
 
-export const LoginForm = () => {
-  const { getFieldProps, touched, errors, isValid, dirty } = useLoginForm();
+export const SignupForm = () => {
+  const { getFieldProps, touched, errors, isValid, dirty } = useSignupForm();
   const navigate = useNavigate();
   const { t } = useTranslation();
 
@@ -21,11 +21,25 @@ export const LoginForm = () => {
     <Box p={4} width="100%">
       <Form method="post" action="/login">
         <Stack spacing={3}>
+          <FormControl error={touched.fullName && Boolean(errors.fullName)}>
+            <FormLabel sx={{ color: "primary.main", mb: 1 }}>
+              {t("fullName")}
+            </FormLabel>
+            <TextField id="username" required {...getFieldProps("fullName")} />
+            <FormHelperText>
+              {touched.fullName && errors.fullName}
+            </FormHelperText>
+          </FormControl>
           <FormControl error={touched.username && Boolean(errors.username)}>
             <FormLabel sx={{ color: "primary.main", mb: 1 }}>
               {t("username")}
             </FormLabel>
-            <TextField id="username" required {...getFieldProps("username")} />
+            <TextField
+              id="username"
+              required
+              error={touched.username && Boolean(errors.username)}
+              {...getFieldProps("username")}
+            />
             <FormHelperText>
               {touched.username && errors.username}
             </FormHelperText>
@@ -56,10 +70,10 @@ export const LoginForm = () => {
               type="submit"
               disabled={!dirty || !isValid}
             >
-              {t("login")}
-            </Button>
-            <Button color="secondary" onClick={() => navigate("/signup")}>
               {t("register")}
+            </Button>
+            <Button color="secondary" onClick={() => navigate("/login")}>
+              {t("login")}
             </Button>
           </Box>
         </Stack>

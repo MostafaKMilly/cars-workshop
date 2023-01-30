@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
-import { FormContainer, LoginForm } from "./components";
+import { FormContainer, SignupForm } from "./components";
 
-export const Login = () => {
+export const Signup = () => {
   return (
     <Box
       display="flex"
@@ -12,7 +12,7 @@ export const Login = () => {
     >
       <FormContainer elevation={1}>
         <img src="/logo.svg" alt="logo" width={130} />
-        <LoginForm />
+        <SignupForm />
       </FormContainer>
     </Box>
   );
