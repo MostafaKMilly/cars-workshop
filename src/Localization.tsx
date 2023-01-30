@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import rtlPlugin from "stylis-plugin-rtl";
 import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import { prefixer } from "stylis";
 import { useTranslation } from "react-i18next";
-import { responsiveFontSizes, ThemeProvider } from "@mui/material";
+import { CssBaseline, responsiveFontSizes, ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
 
 const cacheRtl = createCache({
@@ -21,13 +21,14 @@ export const LocalizationProvider = ({ children }: React.PropsWithChildren) => {
   const { i18n } = useTranslation();
   const direction = i18n.dir();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.dir = direction;
   }, [direction]);
 
   return (
     <CacheProvider value={direction === "ltr" ? cacheLtr : cacheRtl}>
       <ThemeProvider theme={responsiveFontSizes(theme(direction))}>
+        <CssBaseline />
         {children}
       </ThemeProvider>
     </CacheProvider>
