@@ -11,8 +11,8 @@ export const LanguageSelect = () => {
         i18n.changeLanguage(e.target.value as string);
       }}
     >
-      <MenuItem value="en">En</MenuItem>
-      <MenuItem value="ar">Ar</MenuItem>
+      <MenuItem value="en">EN</MenuItem>
+      <MenuItem value="ar">AR</MenuItem>
     </Select>
   );
 };
