@@ -16,7 +16,6 @@ export const LoginForm = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  console.log(touched);
   return (
     <Box p={4} width="100%">
       <Form method="post" action="/login">
