@@ -19,7 +19,7 @@ export const SignupForm = () => {
 
   return (
     <Box p={4} width="100%">
-      <Form method="post" action="/login">
+      <Form method="post" action="/signup">
         <Stack spacing={3}>
           <FormControl error={touched.fullName && Boolean(errors.fullName)}>
             <FormLabel sx={{ color: "primary.main", mb: 1 }}>

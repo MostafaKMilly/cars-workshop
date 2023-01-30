@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import { FormContainer, SignupForm } from "./components";
+import { redirect, ActionFunctionArgs } from "react-router-dom";
 
 const loader = () => {
   const token = localStorage.getItem("token");
@@ -11,8 +12,12 @@ const loader = () => {
 
 const action = async ({ request }: ActionFunctionArgs) => {
   const formData = await request.formData();
+  const user = {
+    username: formData.get("username"),
+    fullName: formData.get("fullName"),
+  };
   // Store dummy form data to simulate a successful login request
-  localStorage.setItem("token", JSON.stringify(formData));
+  localStorage.setItem("token", JSON.stringify(user));
   return redirect("/");
 };
 
