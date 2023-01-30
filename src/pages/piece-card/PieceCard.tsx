@@ -6,6 +6,7 @@ import PixcelMikeImg from "@/assets/images/pexelsMike.png";
 import { useNavigate } from "react-router-dom";
 import { GenericDialog } from "@/shared/components";
 import { AddBrandDialog } from "./components/AddBrandDialog";
+import { AddOwnerDialog } from "./components/AddOwnerDialog";
 
 export const PieceCard = () => {
   const { t } = useTranslation();
@@ -80,6 +81,13 @@ export const PieceCard = () => {
         onClose={handleClose}
         handleAddBrand={(brand) => {
           form.setFieldValue("brand", brand);
+        }}
+      />
+      <AddOwnerDialog
+        open={isDialogOpen("owner")}
+        onClose={handleClose}
+        handleAddOwner={(owner) => {
+          form.setFieldValue("owner", owner);
         }}
       />
     </CardContainer>

@@ -17,3 +17,5 @@ export type PieceCardForm = {
 export type Dialog = "brand" | "owner" | undefined;
 
 export type Brands = { id: number; name: string }[];
+
+export type Owners = { id: number; name: string }[];
