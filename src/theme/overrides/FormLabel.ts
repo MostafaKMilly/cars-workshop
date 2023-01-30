@@ -5,7 +5,7 @@ export const MuiFormLableOverrides: Components<
 >["MuiFormLabel"] = {
   styleOverrides: {
     root: ({ theme }) => ({
-      color: theme.palette.primary.main,
+      color: theme.palette.primary.light,
       ...theme.typography.body1,
     }),
   },

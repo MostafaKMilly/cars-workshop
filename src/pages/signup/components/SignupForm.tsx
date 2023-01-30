@@ -22,18 +22,14 @@ export const SignupForm = () => {
       <Form method="post" action="/signup">
         <Stack spacing={3}>
           <FormControl error={touched.fullName && Boolean(errors.fullName)}>
-            <FormLabel sx={{ color: "primary.main", mb: 1 }}>
-              {t("fullName")}
-            </FormLabel>
+            <FormLabel sx={{ mb: 1 }}>{t("fullName")}</FormLabel>
             <TextField id="username" required {...getFieldProps("fullName")} />
             <FormHelperText>
               {touched.fullName && errors.fullName}
             </FormHelperText>
           </FormControl>
           <FormControl error={touched.username && Boolean(errors.username)}>
-            <FormLabel sx={{ color: "primary.main", mb: 1 }}>
-              {t("username")}
-            </FormLabel>
+            <FormLabel sx={{ mb: 1 }}>{t("username")}</FormLabel>
             <TextField
               id="username"
               required
@@ -45,9 +41,7 @@ export const SignupForm = () => {
             </FormHelperText>
           </FormControl>
           <FormControl error={touched.password && Boolean(errors.password)}>
-            <FormLabel sx={{ color: "primary.main", mb: 1 }}>
-              {t("password")}
-            </FormLabel>
+            <FormLabel sx={{ mb: 1 }}>{t("password")}</FormLabel>
             <TextField
               id="password"
               required

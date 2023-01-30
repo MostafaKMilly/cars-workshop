@@ -6,7 +6,7 @@ import {
 
 const primary: SimplePaletteColorOptions = {
   main: "#3F7D20",
-  light: "#6fac4d",
+  light: "#72B01D",
   dark: "#084f00",
 };
 
