@@ -20,6 +20,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "17px",
             flexDirection: "row",
@@ -37,6 +41,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",
@@ -50,6 +58,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",
@@ -63,6 +75,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",
@@ -89,6 +105,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",
@@ -102,6 +122,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",
@@ -119,6 +143,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",
@@ -132,6 +160,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",
@@ -148,6 +180,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",
@@ -174,6 +210,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",
@@ -187,6 +227,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",
@@ -202,6 +246,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",
@@ -215,6 +263,10 @@ export const CardForm = (props: CardFormProps) => {
         <FormControl
           sx={{
             display: "flex",
+            flexWrap: {
+              xs: "wrap",
+              sm: "nowrap",
+            },
             alignItems: "center",
             columnGap: "16px",
             flexDirection: "row",

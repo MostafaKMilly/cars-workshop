@@ -9,7 +9,7 @@ export const NoCardsOverlay = () => {
       elevation={1}
       sx={{ p: 5, borderRadius: "50px", textAlign: "center" }}
     >
-      <img src={ChooseCard} alt="chooseCard" width="300px" />
+      <img src={ChooseCard} alt="chooseCard" width="235px" />
       <Typography sx={{ mt: 3 }} variant="body1">
         {t("select_card")}
       </Typography>

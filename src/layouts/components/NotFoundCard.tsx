@@ -9,7 +9,7 @@ export const NotFoundCard = () => {
       elevation={1}
       sx={{ p: 5, borderRadius: "50px", textAlign: "center" }}
     >
-      <img src={BuildingCard} alt="chooseCard" width="300px" />
+      <img src={BuildingCard} alt="chooseCard" width="235px" />
       <Typography sx={{ mt: 3 }} variant="body1">
         {t("card_under_bulding")}
       </Typography>

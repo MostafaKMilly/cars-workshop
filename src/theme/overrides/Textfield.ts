@@ -14,6 +14,7 @@ export const MuiTextFieldOverrides: Components<
       backgroundColor: theme.palette.primary.main,
       border: `2px solid ${theme.palette.primary.light}`,
       borderRadius: 10,
+      minWidth: 120,
     }),
   },
   variants: [
